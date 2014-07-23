@@ -1,0 +1,17 @@
+<?php
+
+$wgMakeUserPageFromBio      = ${installable.customizationpoints.makeuserpagefrombio.value};
+$wgAutoWelcomeNewUsers      = ${installable.customizationpoints.autowelcomenewusers.value};
+$wgUseRealNamesOnly         = ${installable.customizationpoints.userealnamesonly.value};
+$wgRejectedAccountMaxAge    = ${installable.customizationpoints.rejectedaccountmaxage.value};
+$wgConfirmAccountRejectAge  = ${installable.customizationpoints.confirmaccountrejectage.value};
+$wgAccountRequestThrottle   = ${installable.customizationpoints.accountrequestthrottle.value};
+$wgAccountRequestMinWords   = ${installable.customizationpoints.accountrequestminwords.value};
+$wgAccountRequestToS        = ${installable.customizationpoints.accountrequesttos.value};
+$wgAccountRequestExtraInfo  = ${installable.customizationpoints.accountrequestextrainfo.value};
+$wgAllowAccountRequestFiles = ${installable.customizationpoints.allowaccountrequestfiles.value};
+$wgAutoUserBioText          = '${escapeSquote(installable.customizationpoints.autouserbiotext.value)}';
+$wgConfirmAccountContact    = '${escapeSquote(installable.customizationpoints.confirmaccountcontact.value)}';
+$wgAllowRealName            = ${installable.customizationpoints.allowrealname.value};
+
+require_once( '/usr/share/mediawiki-ext-confirmaccount/ConfirmAccount/ConfirmAccount.php' );

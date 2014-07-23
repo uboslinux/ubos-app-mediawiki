@@ -1,0 +1,80 @@
+<?php
+
+if ( !defined( 'MEDIAWIKI' ) ) {
+        exit;
+}
+
+# $wgDebugLogFile = "/tmp/mediawiki-${appconfig.appconfigid}-debug.log";
+$wgSitename         = '${escapeSquote(installable.customizationpoints.wikititle.value)}';
+$wgScriptPath       = '${appconfig.context}/_';
+$wgScriptExtension  = ".php";
+$wgLoadScript       = "${appconfig.context}/load.php";
+$wgServer           = "http://${site.hostname}";
+$wgStylePath        = "${appconfig.context}/_/skins";
+
+# $wgUploadDirectory    = '${appconfig.datadir}/images';
+# $wgFileCacheDirectory = '${appconfig.datadir}/cache';
+
+$wgEnableEmail      = true;
+$wgEnableUserEmail  = true;
+$wgEmergencyContact = "${escapeSquote(site.admin.email)}";
+$wgPasswordSender   = "noreply@${site.hostname}";
+$wgEnotifUserTalk   = true;
+$wgEnotifWatchlist  = true;
+$wgEmailAuthentication = true;
+$wgDBtype           = 'mysql';
+$wgDBserver         = '${appconfig.mysql.dbhost.maindb}';
+$wgDBname           = '${appconfig.mysql.dbname.maindb}';
+$wgDBuser           = '${appconfig.mysql.dbuser.maindb}';
+$wgDBpassword       = '${escapeSquote(appconfig.mysql.dbusercredential.maindb)}';
+$wgDBprefix         = '';
+$wgDBTableOptions   = 'ENGINE=InnoDB, DEFAULT CHARSET=utf8';
+
+$wgMainCacheType = CACHE_NONE;
+$wgMemCachedServers = array();
+
+$wgEnableUploads = true;
+# $wgUseImageMagick = true; Does not work
+$wgImageMagickConvertCommand = "/usr/bin/convert";
+
+$wgUseInstantCommons  = false;
+
+$wgShellLocale = "en_US.utf8";
+
+$wgCapitalLinks  = false; # Leave URL captialization as it is, don't toUpper first char
+
+$wgLanguageCode = "en";
+
+$wgSecretKey = '${randomHex(32)}';
+$wgDefaultSkin = 'vector';
+
+$wgRightsPage = '${escapeSquote(installable.customizationpoints.wikititle.value)}:Copyrights';
+    # This seems to be the default mentioned in the edit window
+
+$wgDiff3 = "/usr/bin/diff3";
+
+$wgResourceLoaderMaxQueryLength = 512;
+
+$wgGroupPermissions['*']['edit'] = false; # FIXME this should become an optional
+# $wgGroupPermissions['user']['edit'] = true;
+# $wgGroupPermissions['sysop']['edit'] = true;
+# $wgGroupPermissions['*']['upload'] = false;
+# $wgGroupPermissions['sysop']['upload'] = true;
+# $wgGroupPermissions['sysop']['userrights'] = true;
+
+$wgArticlePath = "${appconfig.context}/$1";
+# $wgUsePathInfo = true;
+$wgAllowDisplayTitle = true;
+$wgAllowExternalImages = true;
+
+$wgFileExtensions = array('png','gif','jpg','jpeg','doc','xls','pdf','ppt','tiff','bmp','docx', 'xlsx', 'pptx','ps','odt','ods','odp','odg');
+
+$wgLogo = "${appconfig.context}/_/indie-images/logo.png"; # Aliased to default if not exists
+
+if( is_dir( "${appconfig.apache2.dir}/_/indie-accessories" )) {
+    foreach( scandir( "${appconfig.apache2.dir}/_/indie-accessories" ) as $accessoryFile ) {
+        if( substr( $accessoryFile, -4, 4 ) == '.php' ) {
+            include "${appconfig.apache2.dir}/_/indie-accessories/$accessoryFile";
+        }
+    }
+}

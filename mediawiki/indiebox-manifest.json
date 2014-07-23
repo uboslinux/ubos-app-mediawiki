@@ -1,0 +1,177 @@
+{
+    "type" : "app",
+
+    "info" : {
+        "package"         : "##pkgname##",
+        "name"            : "Mediawiki",
+        "tagline"         : "##pkgdesc##",
+        "description"     : "##description##",
+
+        "developer"       : "##developer##",
+        "maintainer"      : "##maintainer##",
+
+        "upstreamversion" : "##pkgver##",
+        "packageversion"  : "##pkgver##-##pkgrel##",
+
+        "licenses" : [
+            "##license##"
+        ]
+    },
+
+    "roles" : {
+        "apache2" : {
+            "defaultcontext" : "/wiki",
+            "depends" : [
+                "php",
+                "php-apache",
+                "php-gd",
+                "php-intl",
+                "php-xcache"
+            ],
+            "apache2modules" : [
+                "php5",
+                "rewrite"
+            ],
+            "phpmodules" : [
+                "gd",
+                "intl",
+                "xcache"
+            ],
+            "wellknown" : {
+                "robotstxt" : {
+                    "disallow" : [
+                        "/_"
+                    ]
+                }
+            },
+            "appconfigitems" : [
+                {
+                    "type" : "directory",
+                    "name" : "_"
+                },
+                {
+                    "type" : "directory",
+                    "names" : [
+                        "_/indie-accessories",
+                        "_/indie-images",
+                        "_/indie-skins",
+                        "_/extensions"
+                    ]
+                },
+                {
+                    "type" : "directory",
+                    "name" : "_/images",
+                    "retentionpolicy" : "keep",
+                    "retentionbucket" : "imagedir",
+                    "mode" : "0755",
+                    "uname" : "${apache2.uname}",
+                    "gname" : "${apache2.gname}"
+                },
+                {
+                    "type"  : "symlink",
+                    "names" : [
+                        "api.php",
+                        "img_auth.php",
+                        "includes",
+                        "index.php",
+                        "languages",
+                        "load.php",
+                        "opensearch_desc.php",
+                        "profileinfo.php",
+                        "resources",
+                        "skins",
+                        "thumb.php",
+                        "thumb_handler.php",
+                        "wiki.phtml"
+                    ],
+                    "source" : "mediawiki/$2"
+                },
+                {
+                    "type"  : "symlink",
+                    "names" : [
+                        "_/indie-skins/vector",
+                        "_/indie-skins/Vector.php"
+                    ],
+                    "source" : "mediawiki/skins/$2"
+                },
+                {
+                    "type"   : "symlink",
+                    "name"   : "_/indie-images/mediawiki.png",
+                    "source" : "mediawiki/skins/common/images/mediawiki.png"
+                },
+                {
+                    "type"         : "file",
+                    "name"         : "LocalSettings.php",
+                    "template"     : "tmpl/LocalSettings.php.tmpl",
+                    "templatelang" : "varsubst"
+                },
+                {
+                    "type"         : "file",
+                    "name"         : "AdminSettings.php",
+                    "template"     : "tmpl/AdminSettings.php.tmpl",
+                    "templatelang" : "varsubst"
+                },
+                {
+                    "type"         : "file",
+                    "name"         : ".htaccess",
+                    "template"     : "tmpl/htaccess.pl",
+                    "templatelang" : "perlscript"
+                },
+                {
+                    "type"   : "perlscript",
+                    "source" : "bin/symlink-logo.pl"
+                }
+            ],
+            "installers" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "bin/create-admin.pl"
+                }
+            ],
+            "upgraders" : [
+                {
+                    "type"   : "perlscript",
+                    "source" : "bin/upgrade.pl"
+                }
+            ]
+        },
+        "mysql" : {
+            "appconfigitems" : [
+                {
+                    "type"       : "mysql-database",
+                    "name"       : "maindb",
+                    "retentionpolicy"  : "keep",
+                    "retentionbucket"  : "maindb",
+                    "privileges" : "index, create, select, insert, update, delete, alter, lock tables"
+                }
+            ],
+            "installers" : [
+                {
+                    "name"   : "maindb",
+                    "type"   : "sqlscript",
+                    "source" : "mediawiki/maintenance/tables.sql"
+                }
+            ]
+        }
+    },
+    "customizationpoints" : {
+        "wikititle" : {
+            "name"     : "Wiki Title",
+            "type"     : "string",
+            "required" : false,
+            "default"  : {
+                "value" : "My Wiki"
+            }
+        },
+        "wikilogo"     : {
+            "name"     : "Wiki Logo",
+            "type"     : "image",
+            "required" : false,
+            "default"  : {
+                "value" : null
+            }
+        }
+    }
+}
+
+

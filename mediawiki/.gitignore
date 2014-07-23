@@ -1,0 +1,5 @@
+mediawiki-*-any.pkg.tar.xz
+mediawiki-*-any.pkg.tar.xz.sig
+mediawiki-*.tar.gz
+pkg/
+src/

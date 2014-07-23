@@ -1,0 +1,138 @@
+{
+    "type"  : "accessory",
+    "appid" : "mediawiki",
+
+    "info" : {
+        "package"         : "##pkgname##",
+        "name"            : "Confirm Account",
+        "tagline"         : "##pkgdesc##",
+        "description"     : "##description##",
+
+        "developer"       : "##developer##",
+        "maintainer"      : "##maintainer##",
+
+        "upstreamversion" : "##pkgver##",
+        "packageversion"  : "##pkgver##-##pkgrel##",
+
+        "licenses" : [
+            "##license##"
+        ]
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type" : "file",
+                    "name" : "_/indie-accessories/ConfirmAccount.php",
+                    "template"     : "tmpl/ConfirmAccount.php.tmpl",
+                    "templatelang" : "varsubst"
+                }
+            ]
+        }
+    },
+    "customizationpoints" : {
+        "makeuserpagefrombio" : {
+            "name"     : "MakeUserPageFromBio",
+            "type"     : "boolean",
+            "required" : false,
+            "default"  : {
+                "value" : true
+            }
+        },
+        "autowelcomenewusers" : {
+            "name"     : "AutoWelcomeNewUsers",
+            "type"     : "boolean",
+            "required" : false,
+            "default"  : {
+                "value" : true
+            }
+        },
+        "userealnamesonly" : {
+            "name"     : "UseRealNamesOnly",
+            "type"     : "boolean",
+            "required" : false,
+            "default"  : {
+                "value" : true
+            }
+        },
+        "rejectedaccountmaxage" : {
+            "name"     : "RejectedAccountMaxAge",
+            "type"     : "integer",
+            "required" : false,
+            "default"  : {
+                "value" : 604800
+            }
+        },
+        "confirmaccountrejectage" : {
+            "name"     : "ConfirmAccountRejectAge",
+            "type"     : "integer",
+            "required" : false,
+            "default"  : {
+                "value" : 2592000
+            }
+        },
+        "accountrequestthrottle" : {
+            "name"     : "AccountRequestThrottle",
+            "type"     : "integer",
+            "required" : false,
+            "default"  : {
+                "value" : 1
+            }
+        },
+        "accountrequestminwords" : {
+            "name"     : "AccountRequestMinWords",
+            "type"     : "integer",
+            "required" : false,
+            "default"  : {
+                "value" : 50
+            }
+        },
+        "accountrequesttos" : {
+            "name"     : "AccountRequestToS",
+            "type"     : "boolean",
+            "required" : false,
+            "default"  : {
+                "value" : true
+            }
+        },
+        "accountrequestextrainfo" : {
+            "name"     : "AccountRequestExtraInfo",
+            "type"     : "boolean",
+            "required" : false,
+            "default"  : {
+                "value" : true
+            }
+        },
+        "allowaccountrequestfiles" : {
+            "name"     : "AllowAccountRequestFiles",
+            "type"     : "boolean",
+            "required" : false,
+            "default"  : {
+                "value" : true
+            }
+        },
+        "autouserbiotext" : {
+            "name"     : "AutoUserBioText",
+            "type"     : "text",
+            "required" : false,
+            "default"  : {
+                "value" : ""
+            }
+        },
+        "confirmaccountcontact" : {
+            "name"    : "ConfirmAccountContact",
+            "type"    : "string",
+            "required" : true
+        },
+        "allowrealname" : {
+            "name"    : "AllowRealName",
+            "type"    : "boolean",
+            "required" : false,
+            "default" : {
+                "value" : true
+            }
+        }
+    }
+}
+
