@@ -22,7 +22,7 @@ _parameterize=$(cat <<END
     s!##maintainer##!$maintainer!g;
     s!##pkgver##!$pkgver!g;
     s!##pkgrel##!$pkgrel!g;
-    s!##license##!$_license!g;
+    s!##license##!$license!g;
     s!##description##!$_description!g;
 END
 )
