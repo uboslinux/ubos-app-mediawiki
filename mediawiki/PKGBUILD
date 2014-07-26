@@ -3,7 +3,7 @@ maintainer=http://indiebox.net/
 pkgname=$(basename $(pwd))
 _majorpkgver=1.23
 pkgver=${_majorpkgver}.1
-pkgrel=1
+pkgrel=2
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 url=${developer}
@@ -18,8 +18,8 @@ md5sums=('61e003e87028c1267aa7c47f2a618746')
 _parameterize=$(cat <<END
     s!##pkgname##!$pkgname!g;
     s/##pkgdesc##/$pkgdesc/g;
-    s!##developer##!$_developer!g;
-    s!##maintainer##!$_maintainer!g;
+    s!##developer##!$developer!g;
+    s!##maintainer##!$maintainer!g;
     s!##pkgver##!$pkgver!g;
     s!##pkgrel##!$pkgrel!g;
     s!##license##!$_license!g;
