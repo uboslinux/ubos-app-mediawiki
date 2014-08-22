@@ -1,23 +1,6 @@
 {
     "type" : "app",
 
-    "info" : {
-        "package"         : "##pkgname##",
-        "name"            : "Mediawiki",
-        "tagline"         : "##pkgdesc##",
-        "description"     : "##description##",
-
-        "developer"       : "##developer##",
-        "maintainer"      : "##maintainer##",
-
-        "upstreamversion" : "##pkgver##",
-        "packageversion"  : "##pkgver##-##pkgrel##",
-
-        "licenses" : [
-            "##license##"
-        ]
-    },
-
     "roles" : {
         "apache2" : {
             "defaultcontext" : "/wiki",
@@ -52,9 +35,9 @@
                 {
                     "type" : "directory",
                     "names" : [
-                        "_/indie-accessories",
-                        "_/indie-images",
-                        "_/indie-skins",
+                        "_/ubos-accessories",
+                        "_/ubos-images",
+                        "_/ubos-skins",
                         "_/extensions"
                     ]
                 },
@@ -89,14 +72,14 @@
                 {
                     "type"  : "symlink",
                     "names" : [
-                        "_/indie-skins/vector",
-                        "_/indie-skins/Vector.php"
+                        "_/ubos-skins/vector",
+                        "_/ubos-skins/Vector.php"
                     ],
                     "source" : "mediawiki/skins/$2"
                 },
                 {
                     "type"   : "symlink",
-                    "name"   : "_/indie-images/mediawiki.png",
+                    "name"   : "_/ubos-images/mediawiki.png",
                     "source" : "mediawiki/skins/common/images/mediawiki.png"
                 },
                 {

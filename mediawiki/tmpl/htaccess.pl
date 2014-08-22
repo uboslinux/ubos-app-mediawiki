@@ -21,9 +21,9 @@ DirectoryIndex index.php
 
 # RewriteBase $rewriteBase
 
-RewriteCond %{REQUEST_URI} ^$context/_/indie-images/logo.png\$
+RewriteCond %{REQUEST_URI} ^$context/_/ubos-images/logo.png\$
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.\*)\$ _/indie-images/mediawiki.png
+RewriteRule ^(.\*)\$ _/ubos-images/mediawiki.png
 
 # RewriteCond %{REQUEST_URI} ^$context/_/index\.php
 # RewriteRule ^(.\*)\$ index.php [L,QSA]

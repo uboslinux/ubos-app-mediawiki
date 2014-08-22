@@ -1,37 +1,21 @@
 developer=http://wikimediafoundation.org/
-maintainer=http://indiebox.net/
+url=${developer}
+maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _majorpkgver=1.23
 pkgver=${_majorpkgver}.1
-pkgrel=3
+pkgrel=4
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
-url=${developer}
 license=("GPL")
-groups=()
-depends=()
-backup=()
 source=("http://download.wikimedia.org/mediawiki/${_majorpkgver}/mediawiki-${pkgver}.tar.gz")
 options=('!strip')
 md5sums=('61e003e87028c1267aa7c47f2a618746')
-# from http://stackoverflow.com/questions/1251999/sed-how-can-i-replace-a-newline-n
-_parameterize=$(cat <<END
-    s!##pkgname##!$pkgname!g;
-    s/##pkgdesc##/$pkgdesc/g;
-    s!##developer##!$developer!g;
-    s!##maintainer##!$maintainer!g;
-    s!##pkgver##!$pkgver!g;
-    s!##pkgrel##!$pkgrel!g;
-    s!##license##!$license!g;
-    s!##description##!$_description!g;
-END
-)
 
 package() {
 # Manifest
-    mkdir -p $pkgdir/var/lib/indiebox/manifests
-    perl -pe "$_parameterize" $startdir/indiebox-manifest.json > $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
-    chmod 0644 $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
+    mkdir -p $pkgdir/var/lib/ubos/manifests
+    install -m644 $startdir/ubos-manifest.json $pkgdir/var/lib/ubos/manifests/${pkgname}.json
 
 # Icons
     mkdir -p $pkgdir/srv/http/_appicons/$pkgname

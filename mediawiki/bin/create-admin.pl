@@ -5,8 +5,8 @@
 
 use strict;
 
-use IndieBox::Logging;
-use IndieBox::Utils;
+use UBOS::Logging;
+use UBOS::Utils;
 
 my $ret = 1;
 
@@ -19,7 +19,7 @@ if( 'install' eq $operation ) {
         my $cmd = "TERM=vt100";
         $cmd .= " php";
         $cmd .= " -d open_basedir='$appConfigDir:/usr/share/'"; # would be nice if this was stricter, but accessories!
-        $cmd .= " /usr/share/indie-mediawiki/mediawiki/maintenance/createAndPromote.php";
+        $cmd .= " /usr/share/mediawiki/mediawiki/maintenance/createAndPromote.php";
         $cmd .= " --quiet";
         $cmd .= " --force"; # continue even if user exists already
         $cmd .= " --conf '${appConfigDir}/LocalSettings.php'";
@@ -31,7 +31,7 @@ if( 'install' eq $operation ) {
         my $out = '';
         my $err = '';
 
-        if( IndieBox::Utils::myexec( $cmd, undef, \$out, \$err ) != 0 && $err !~ /account exists/ ) {
+        if( UBOS::Utils::myexec( $cmd, undef, \$out, \$err ) != 0 && $err !~ /account exists/ ) {
             error( "Creating MediaWiki admin user failed: $err\n $out" );
             $ret = 0;
         }

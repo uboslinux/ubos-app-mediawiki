@@ -5,24 +5,24 @@
 
 use strict;
 
-use IndieBox::Logging;
-use IndieBox::Utils;
+use UBOS::Logging;
+use UBOS::Utils;
 
 my $ret       = 1;
 my $logoFile  = $config->getResolveOrNull( 'installable.customizationpoints.wikilogo.filename', undef, 1 );
 my $dir       = $config->getResolveOrNull( 'appconfig.apache2.dir' );
-my $localLogo = "$dir/_/indie-images/logo.png";
+my $localLogo = "$dir/_/ubos-images/logo.png";
 
 if( 'install' eq $operation ) {
     if( $logoFile && -f $logoFile ) {
-        unless( IndieBox::Utils::symlink( $logoFile, $localLogo )) {
+        unless( UBOS::Utils::symlink( $logoFile, $localLogo )) {
             error( 'Symlink could not be created:', $localLogo );
         }
     }
 }
 if( 'uninstall' eq $operation ) {
     if( -l $localLogo || -e $localLogo ) {
-        unless( IndieBox::Utils::deleteFile( $localLogo )) {
+        unless( UBOS::Utils::deleteFile( $localLogo )) {
             error( 'Symlink could not be deleted:', $localLogo );
         }
     }
