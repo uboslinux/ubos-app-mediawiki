@@ -18,6 +18,9 @@
             "phpmodules" : [
                 "gd",
                 "intl",
+                "mysql",
+                "mysqli",
+                "pdo_mysql",
                 "xcache"
             ],
             "wellknown" : {
