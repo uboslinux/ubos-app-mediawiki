@@ -4,21 +4,25 @@ if ( !defined( 'MEDIAWIKI' ) ) {
         exit;
 }
 
+$hostname = '${site.hostname}';
+if( $hostname == '*' ) {
+    $hostname = $_SERVER['SERVER_NAME'];
+}
 # $wgDebugLogFile = "/tmp/mediawiki-${appconfig.appconfigid}-debug.log";
 $wgSitename         = '${escapeSquote(installable.customizationpoints.wikititle.value)}';
 $wgScriptPath       = '${appconfig.context}/_';
-$wgScriptExtension  = ".php";
-$wgLoadScript       = "${appconfig.context}/load.php";
-$wgServer           = "http://${site.hostname}";
-$wgStylePath        = "${appconfig.context}/_/skins";
+$wgScriptExtension  = '.php';
+$wgLoadScript       = '${appconfig.context}/load.php';
+$wgServer           = 'http://$hostname';
+$wgStylePath        = '${appconfig.context}/_/skins';
 
 # $wgUploadDirectory    = '${appconfig.datadir}/images';
 # $wgFileCacheDirectory = '${appconfig.datadir}/cache';
 
 $wgEnableEmail      = true;
 $wgEnableUserEmail  = true;
-$wgEmergencyContact = "${escapeSquote(site.admin.email)}";
-$wgPasswordSender   = "noreply@${site.hostname}";
+$wgEmergencyContact = '${escapeSquote(site.admin.email)}';
+$wgPasswordSender   = "noreply@$hostname";
 $wgEnotifUserTalk   = true;
 $wgEnotifWatchlist  = true;
 $wgEmailAuthentication = true;
@@ -35,15 +39,15 @@ $wgMemCachedServers = array();
 
 $wgEnableUploads = true;
 # $wgUseImageMagick = true; Does not work
-$wgImageMagickConvertCommand = "/usr/bin/convert";
+$wgImageMagickConvertCommand = '/usr/bin/convert';
 
 $wgUseInstantCommons  = false;
 
-$wgShellLocale = "en_US.utf8";
+$wgShellLocale = 'en_US.utf8';
 
 $wgCapitalLinks  = false; # Leave URL captialization as it is, don't toUpper first char
 
-$wgLanguageCode = "en";
+$wgLanguageCode = 'en';
 
 $wgSecretKey = '${randomHex(32)}';
 $wgDefaultSkin = 'vector';
@@ -51,7 +55,7 @@ $wgDefaultSkin = 'vector';
 $wgRightsPage = '${escapeSquote(installable.customizationpoints.wikititle.value)}:Copyrights';
     # This seems to be the default mentioned in the edit window
 
-$wgDiff3 = "/usr/bin/diff3";
+$wgDiff3 = '/usr/bin/diff3';
 
 $wgResourceLoaderMaxQueryLength = 512;
 

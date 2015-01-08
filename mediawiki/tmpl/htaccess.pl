@@ -19,20 +19,12 @@ Options -Indexes
 # this does not inhibit index.php, just the subdirectories
 DirectoryIndex index.php
 
-# RewriteBase $rewriteBase
-
 RewriteCond %{REQUEST_URI} ^$context/_/ubos-images/logo.png\$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.\*)\$ _/ubos-images/mediawiki.png
 
-# RewriteCond %{REQUEST_URI} ^$context/_/index\.php
-# RewriteRule ^(.\*)\$ index.php [L,QSA]
-
-# RewriteCond %{REQUEST_URI} ^$context/_/
-# RewriteRule ^(.\*)\$ - [L,QSA]
-
 # Don't rewrite again
-RewriteCond %{REQUEST_URI} !^/wiki/index.php
+RewriteCond %{REQUEST_URI} !^$context/index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.\*)\$ index.php?title=\$1 [PT,L,QSA]
 
