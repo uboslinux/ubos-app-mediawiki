@@ -30,15 +30,13 @@ use UBOS::WebAppTest;
 my $TEST = new UBOS::WebAppTest(
     appToTest   => 'mediawiki',
     description => 'Tests whether Mediawiki comes up',
-    testContext => '/wiki',
-    hostname    => 'mediawiki-test',
     checks      => [
             new UBOS::WebAppTest::StateCheck(
                     name  => 'virgin',
                     check => sub {
                         my $c = shift;
 
-                        $c->getMustRedirect(   '/', 'http://mediawiki-test/wiki/Main_Page', undef, 'Front page not redirecting to Main_Page' );
+                        $c->getMustRedirect(   '/', '/Main_Page', undef, 'Front page not redirecting to Main_Page' );
                         $c->getMustContain(    '/Main_Page', 'There is currently no text in this page', undef, 'Wrong front page' );
 
                         return 1;
