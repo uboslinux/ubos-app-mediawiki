@@ -74,16 +74,13 @@
                 },
                 {
                     "type"  : "symlink",
-                    "names" : [
-                        "_/ubos-skins/vector",
-                        "_/ubos-skins/Vector.php"
-                    ],
+                    "name" : "_/ubos-skins/Vector",
                     "source" : "mediawiki/skins/$2"
                 },
                 {
                     "type"   : "symlink",
                     "name"   : "_/ubos-images/mediawiki.png",
-                    "source" : "mediawiki/skins/common/images/mediawiki.png"
+                    "source" : "mediawiki/resources/assets/mediawiki.png"
                 },
                 {
                     "type"         : "file",

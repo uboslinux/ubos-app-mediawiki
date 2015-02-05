@@ -2,13 +2,13 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_majorpkgver=1.23
+_majorpkgver=1.24
 pkgver=${_majorpkgver}.0
-pkgrel=3
+pkgrel=1
 pkgdesc="Requires submission and approval of accounts"
 arch=('any')
 license=("GPL")
-source=("git+https://git.wikimedia.org/git/mediawiki/extensions/ConfirmAccount.git#branch=REL1_23")
+source=("git+https://git.wikimedia.org/git/mediawiki/extensions/ConfirmAccount.git#branch=REL1_24")
 options=('!strip')
 md5sums=('SKIP')
 
