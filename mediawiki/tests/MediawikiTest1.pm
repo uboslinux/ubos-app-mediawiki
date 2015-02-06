@@ -39,6 +39,8 @@ my $TEST = new UBOS::WebAppTest(
                         $c->getMustRedirect(   '/', '/Main_Page', undef, 'Front page not redirecting to Main_Page' );
                         $c->getMustContain(    '/Main_Page', 'There is currently no text in this page', undef, 'Wrong front page' );
 
+                        $c->getMustNotContain( '/Main_Page', '<div class="warningbox">' );
+
                         return 1;
                     }
             )
