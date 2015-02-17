@@ -4,7 +4,7 @@ maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _majorpkgver=1.24
 pkgver=${_majorpkgver}.1
-pkgrel=3
+pkgrel=4
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL")
@@ -34,4 +34,7 @@ package() {
     for f in $startdir/src/mediawiki-${pkgver}/*; do
         [ "$(basename $f)" != "tests" ] && [ "$(basename $f)" != "docs" ] && cp -dr --no-preserve=ownership $f $pkgdir/usr/share/${pkgname}/mediawiki/
     done
+
+# Cache
+    mkdir -p $pkgdir/var/cache/${pkgname}
 }

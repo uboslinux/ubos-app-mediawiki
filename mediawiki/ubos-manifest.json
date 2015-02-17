@@ -103,6 +103,13 @@
                 {
                     "type"   : "perlscript",
                     "source" : "bin/symlink-logo.pl"
+                },
+                {
+                    "type" : "directory",
+                    "name" : "/var/cache/mediawiki/${appconfig.appconfigid}",
+                    "mode" : "0755",
+                    "uname" : "${apache2.uname}",
+                    "gname" : "${apache2.gname}"
                 }
             ],
             "installers" : [

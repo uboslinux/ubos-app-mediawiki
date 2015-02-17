@@ -20,8 +20,9 @@ $wgLoadScript       = '${appconfig.context}/load.php';
 $wgServer           = "http://$hostname";
 $wgStylePath        = '${appconfig.context}/_/skins';
 
-# $wgUploadDirectory    = '${appconfig.datadir}/images';
-# $wgFileCacheDirectory = '${appconfig.datadir}/cache';
+$wgUploadDirectory    = '_/images';
+$wgFileCacheDirectory = '/var/cache/mediawiki/${appconfig.appconfigid}';
+$wgUseFileCache       = true;
 
 $wgEnableEmail      = true;
 $wgEnableUserEmail  = true;
