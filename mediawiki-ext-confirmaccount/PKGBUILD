@@ -9,6 +9,7 @@ pkgdesc="Requires submission and approval of accounts"
 arch=('any')
 license=("GPL")
 source=("git+https://git.wikimedia.org/git/mediawiki/extensions/ConfirmAccount.git#branch=REL1_24")
+# Go here with the browser: https://git.wikimedia.org/summary/mediawiki%2Fextensions%2FConfirmAccount.git
 options=('!strip')
 md5sums=('SKIP')
 
