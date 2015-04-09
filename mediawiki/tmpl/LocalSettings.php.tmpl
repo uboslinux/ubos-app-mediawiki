@@ -17,7 +17,7 @@ $wgSitename         = '${escapeSquote(installable.customizationpoints.wikititle.
 $wgScriptPath       = '${appconfig.context}/_';
 $wgScriptExtension  = '.php';
 $wgLoadScript       = '${appconfig.context}/load.php';
-$wgServer           = "http://$hostname";
+$wgServer           = "${site.protocol}://$hostname";
 $wgStylePath        = '${appconfig.context}/_/skins';
 
 $wgUploadDirectory    = '_/images';
