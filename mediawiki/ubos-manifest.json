@@ -68,6 +68,7 @@
                         "skins",
                         "thumb.php",
                         "thumb_handler.php",
+                        "vendor",
                         "wiki.phtml"
                     ],
                     "source" : "mediawiki/$2"
