@@ -2,16 +2,15 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_majorpkgver=1.24
-pkgver=${_majorpkgver}.0
+_pkgver=REL1_25-3d2b423
+pkgver=${_pkgver/-/_}
 pkgrel=1
 pkgdesc="Requires submission and approval of accounts"
 arch=('any')
 license=("GPL")
-source=("git+https://git.wikimedia.org/git/mediawiki/extensions/ConfirmAccount.git#branch=REL1_24")
-# Go here with the browser: https://git.wikimedia.org/summary/mediawiki%2Fextensions%2FConfirmAccount.git
+source=("https://extdist.wmflabs.org/dist/extensions/ConfirmAccount-${_pkgver}.tar.gz")
 options=('!strip')
-md5sums=('SKIP')
+sha512sums=('3e3d51692d35261c4f83914717cdad63db5bd5ac85cebad826e7c3d2eb438d5baa968485868ae82db4ec949128164b35edae6d040bde02df8bfcc3471409330f')
 
 package() {
 # Manifest

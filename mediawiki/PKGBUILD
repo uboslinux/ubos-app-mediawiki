@@ -3,14 +3,14 @@ url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _majorpkgver=1.25
-pkgver=${_majorpkgver}.1
-pkgrel=9
+pkgver=${_majorpkgver}.3
+pkgrel=1
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL")
 source=("http://download.wikimedia.org/mediawiki/${_majorpkgver}/mediawiki-${pkgver}.tar.gz")
 options=('!strip')
-sha512sums=('e21175170a4dafcd1ecb5fe9de212906a0d9c886a0251df08f0297d187be0956bc00d8d928b6d36d0ee515a8ebcc3d7867d076127fb2c30501dee63a12000489')
+sha512sums=('1e9ba10252cac95ca6ccf9a3008e84c735baf69db63ef050e5238909c97e707c48e2d408118793bc451b10469f65ef1e82dfc9d247e08ca085a2fd9e9f9ecc8c')
 
 package() {
 # Manifest
