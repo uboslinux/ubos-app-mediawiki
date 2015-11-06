@@ -8,7 +8,7 @@ pkgrel=1
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL")
-source=("http://download.wikimedia.org/mediawiki/${_majorpkgver}/mediawiki-${pkgver}.tar.gz")
+source=("http://releases.wikimedia.org/mediawiki/${_majorpkgver}/mediawiki-${pkgver}.tar.gz")
 options=('!strip')
 sha512sums=('1e9ba10252cac95ca6ccf9a3008e84c735baf69db63ef050e5238909c97e707c48e2d408118793bc451b10469f65ef1e82dfc9d247e08ca085a2fd9e9f9ecc8c')
 
