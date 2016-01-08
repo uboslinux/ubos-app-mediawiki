@@ -2,7 +2,7 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_pkgver=REL1_25-3d2b423
+_pkgver=REL1_26-d6e2f46
 pkgver=${_pkgver/-/_}
 pkgrel=1
 pkgdesc="Requires submission and approval of accounts"
@@ -10,7 +10,7 @@ arch=('any')
 license=("GPL")
 source=("https://extdist.wmflabs.org/dist/extensions/ConfirmAccount-${_pkgver}.tar.gz")
 options=('!strip')
-sha512sums=('3e3d51692d35261c4f83914717cdad63db5bd5ac85cebad826e7c3d2eb438d5baa968485868ae82db4ec949128164b35edae6d040bde02df8bfcc3471409330f')
+sha512sums=('b2d49e57db52b3f3b59199b00961dedfe0ae58e95a9a7affac5ac65012459382d25e6c6f30ea3802157a5b552e6ae6d8932e288edf088335576e5c0c2692320b')
 
 package() {
 # Manifest
