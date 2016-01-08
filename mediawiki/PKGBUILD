@@ -2,15 +2,15 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_majorpkgver=1.25
-pkgver=${_majorpkgver}.3
+_majorpkgver=1.26
+pkgver=${_majorpkgver}.2
 pkgrel=1
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL")
 source=("http://releases.wikimedia.org/mediawiki/${_majorpkgver}/mediawiki-${pkgver}.tar.gz")
 options=('!strip')
-sha512sums=('1e9ba10252cac95ca6ccf9a3008e84c735baf69db63ef050e5238909c97e707c48e2d408118793bc451b10469f65ef1e82dfc9d247e08ca085a2fd9e9f9ecc8c')
+sha512sums=('aa62a5a3d07d434924e0b6a98aa0adcc8ea483d574c13613725843db3123fb9f0c31641fb6f8430dfaabde6d262ac71a040c8860453d03d9c7c084038dc816b2')
 
 package() {
 # Manifest
