@@ -4,13 +4,13 @@ maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _pkgver=REL1_26-d6e2f46
 pkgver=${_pkgver/-/_}
-pkgrel=1
+pkgrel=2
 pkgdesc="Requires submission and approval of accounts"
 arch=('any')
 license=("GPL")
 source=("https://extdist.wmflabs.org/dist/extensions/ConfirmAccount-${_pkgver}.tar.gz")
 options=('!strip')
-sha512sums=('b2d49e57db52b3f3b59199b00961dedfe0ae58e95a9a7affac5ac65012459382d25e6c6f30ea3802157a5b552e6ae6d8932e288edf088335576e5c0c2692320b')
+sha512sums=('40312644825cb86f1065ea22b843e3e0d600379054ba88758d0afacb58b3ff62a79486be7da3efc532f31ad5e809f23ca7d9c83adecde2c4a0173cdbb55dfc02')
 
 package() {
 # Manifest
