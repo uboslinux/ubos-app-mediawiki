@@ -3,14 +3,18 @@ url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _majorpkgver=1.26
-pkgver=${_majorpkgver}.2
+pkgver=${_majorpkgver}.3
 pkgrel=1
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL")
 source=("http://releases.wikimedia.org/mediawiki/${_majorpkgver}/mediawiki-${pkgver}.tar.gz")
+depends=(
+    'php'
+    'smtp-server'
+)
 options=('!strip')
-sha512sums=('aa62a5a3d07d434924e0b6a98aa0adcc8ea483d574c13613725843db3123fb9f0c31641fb6f8430dfaabde6d262ac71a040c8860453d03d9c7c084038dc816b2')
+sha512sums=('ab1cf714515ed111dc1782e119dc8cd3152c45fd35f7b574e3f9cd80a42594f63e220371f943a38d9d22201e23fc85377c42b78b241f6d62bdf9c03832ec93b2')
 
 package() {
 # Manifest
