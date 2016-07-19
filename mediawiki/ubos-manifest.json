@@ -17,6 +17,7 @@
             ],
             "phpmodules" : [
                 "gd",
+                "iconv",
                 "intl",
                 "mysqli",
                 "pdo_mysql",
