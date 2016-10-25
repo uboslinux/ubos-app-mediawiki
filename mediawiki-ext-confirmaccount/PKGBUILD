@@ -13,7 +13,8 @@ depends=(
     'mediawiki'
 )
 options=('!strip')
-sha512sums=('40312644825cb86f1065ea22b843e3e0d600379054ba88758d0afacb58b3ff62a79486be7da3efc532f31ad5e809f23ca7d9c83adecde2c4a0173cdbb55dfc02')
+sha512sums=('SKIP')
+# produces a different checksum every time it is downloaded
 
 package() {
 # Manifest
