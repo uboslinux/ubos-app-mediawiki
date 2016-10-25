@@ -3,8 +3,8 @@ url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _majorpkgver=1.27
-pkgver=${_majorpkgver}.0
-pkgrel=3
+pkgver=${_majorpkgver}.1
+pkgrel=1
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL")
@@ -14,7 +14,7 @@ depends=(
     'smtp-server'
 )
 options=('!strip')
-sha512sums=('88e1307f310b11f219ea77089bd26b2de02ebaba7ae59e4dbc3deb653d046657eed88d6d66319a3dcda619bee55bb44a44d9809742a0a99f53793806e7109258')
+sha512sums=('0bf3df06af8251729e9c01106a3eea7bdb4b6f27388501c627cb714cbff722f408ade725d7223ab69e79e036cf2a09b1f9a0659f45898508347638b50d440cda')
 
 package() {
 # Manifest
