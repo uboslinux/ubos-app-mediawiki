@@ -15,7 +15,7 @@ if( 'upgrade' eq $operation ) {
 
     my $cmd = "TERM=vt100";
     $cmd .= " php";
-    $cmd .= " -d open_basedir='$appConfigDir:/usr/share/'"; # would be nice if this was stricter, but accessories!
+    $cmd .= " -d open_basedir='$appConfigDir:/usr/share/:/tmp'"; # would be nice if this was stricter, but accessories!
     $cmd .= " /usr/share/mediawiki/mediawiki/maintenance/update.php";
     $cmd .= " --conf '$appConfigDir/LocalSettings.php'";
     $cmd .= " --quick";
