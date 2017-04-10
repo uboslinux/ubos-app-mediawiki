@@ -14,7 +14,7 @@ depends=(
     'smtp-server'
 )
 options=('!strip')
-sha512sums=('0bf3df06af8251729e9c01106a3eea7bdb4b6f27388501c627cb714cbff722f408ade725d7223ab69e79e036cf2a09b1f9a0659f45898508347638b50d440cda')
+sha512sums=('ff118b0a2229265be4b5d461d25d8df48faf5d1b1911aa76fa1ed2dffab0f41030df6b1ae61aad050916606fba81f90f5437b65631786c95ebfd273b331cbc27')
 
 package() {
 # Manifest
