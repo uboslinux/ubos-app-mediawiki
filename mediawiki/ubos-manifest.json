@@ -8,8 +8,7 @@
                 "php",
                 "php-apache",
                 "php-gd",
-                "php-intl",
-                "php-xcache"
+                "php-intl"
             ],
             "apache2modules" : [
                 "php7",
@@ -20,8 +19,7 @@
                 "iconv",
                 "intl",
                 "mysqli",
-                "pdo_mysql",
-                "xcache"
+                "pdo_mysql"
             ],
             "wellknown" : {
                 "robotstxt" : {
