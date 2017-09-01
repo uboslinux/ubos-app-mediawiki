@@ -16,7 +16,8 @@ if( 'install' eq $operation ) {
     my $adminPass    = $config->getResolveOrNull( 'site.admin.credential' );
 
     if( $adminName && $adminPass ) {
-        my $cmd = "TERM=vt100";
+        my $cmd = "cd '$appConfigDir';";
+        $cmd .= " TERM=vt100";
         $cmd .= " php";
         $cmd .= " -d open_basedir='$appConfigDir:/usr/share/:/tmp'"; # would be nice if this was stricter, but accessories!
         $cmd .= " /usr/share/mediawiki/mediawiki/maintenance/createAndPromote.php";

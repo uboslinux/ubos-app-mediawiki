@@ -13,7 +13,8 @@ my $ret = 1;
 if( 'upgrade' eq $operation ) {
     my $appConfigDir = $config->getResolveOrNull( 'appconfig.apache2.dir' );
 
-    my $cmd = "TERM=vt100";
+    my $cmd = "cd '$appConfigDir';";
+    $cmd .= " TERM=vt100";
     $cmd .= " php";
     $cmd .= " -d open_basedir='$appConfigDir:/usr/share/:/tmp'"; # would be nice if this was stricter, but accessories!
     $cmd .= " /usr/share/mediawiki/mediawiki/maintenance/update.php";

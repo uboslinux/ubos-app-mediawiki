@@ -1,7 +1,7 @@
 <?php
 
 if ( !defined( 'MEDIAWIKI' ) ) {
-        exit;
+    exit;
 }
 
 $hostname = '${site.hostname}';
@@ -12,7 +12,11 @@ if( $hostname == '*' ) {
         $hostname = '${hostname}';
     }
 }
+# For debugging, comment out those:
 # $wgDebugLogFile = "/tmp/mediawiki-${appconfig.appconfigid}-debug.log";
+# $wgShowExceptionDetails = true;
+# $wgShowDBErrorBacktrace = true;
+
 $wgSitename         = '${escapeSquote(installable.customizationpoints.wikititle.value)}';
 $wgScriptPath       = '${appconfig.context}/_';
 $wgScriptExtension  = '.php';
