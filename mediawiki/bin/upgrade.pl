@@ -25,7 +25,7 @@ if( 'upgrade' eq $operation ) {
     my $err = '';
 
     # pipe PHP in from stdin
-    debug( 'About to execute PHP:', $cmd );
+    trace( 'About to execute PHP:', $cmd );
 
     if( UBOS::Utils::myexec( $cmd, undef, \$out, \$err ) != 0 ) {
         error( "Upgrading MediaWiki failed: $err\n $out" );
