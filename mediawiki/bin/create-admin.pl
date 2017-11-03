@@ -26,8 +26,8 @@ if( 'install' eq $operation ) {
         $cmd .= " --conf '${appConfigDir}/LocalSettings.php'";
         $cmd .= " --bureaucrat";
         $cmd .= " --sysop";
-        $cmd .= " '$adminName'";
-        $cmd .= " '$adminPass'";
+        $cmd .= ' "' . UBOS::Utils::escapeDquote( $adminName ) . '"';
+        $cmd .= ' "' . UBOS::Utils::escapeDquote( $adminPass ) . '"';
 
         my $out = '';
         my $err = '';

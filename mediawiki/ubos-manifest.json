@@ -55,6 +55,7 @@
                     "type"  : "symlink",
                     "names" : [
                         "api.php",
+                        "autoload.php",
                         "img_auth.php",
                         "includes",
                         "index.php",
@@ -67,7 +68,7 @@
                         "thumb.php",
                         "thumb_handler.php",
                         "vendor",
-                        "wiki.phtml"
+                        "Gruntfile.js"
                     ],
                     "source" : "mediawiki/$2"
                 },
