@@ -1,0 +1,28 @@
+{
+   "siteid" : "sb473d7ba2d84dbaaa55423f07c6ed74fb3a014af",
+   "admin" : {
+      "email" : "test@ubos.net",
+      "userid" : "admin",
+      "username" : "admin",
+      "credential" : "'qwerqwer"
+   },
+   "appconfigs" : [
+      {
+         "context" : "/wiki",
+         "appconfigid" : "a79112356d554a2e7e49ab05c13d2c8eb8ec454a8",
+         "appid" : "mediawiki",
+         "accessoryids" : [
+            "mediawiki-ext-confirmaccount"
+         ],
+         "customizationpoints" : {
+            "mediawiki" : {},
+            "mediawiki-ext-confirmaccount" : {
+               "confirmaccountcontact" : {
+                  "value" : "foo@bar.com"
+               }
+            }
+         }
+      }
+   ],
+   "hostname" : "*"
+}
