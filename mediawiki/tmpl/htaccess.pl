@@ -1,3 +1,10 @@
+#!/usr/bin/perl
+#
+# Generate a .htaccess file
+#
+# Copyright (C) 2014 and later, Indie Computing Corp. All rights reserved. License: see package.
+#
+
 my $hostname    = $config->getResolveOrNull( 'site.hostname' );
 my $context     = $config->getResolveOrNull( 'appconfig.context' );
 my $hiddenpath  = "$context/_";
