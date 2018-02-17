@@ -1,4 +1,3 @@
-mediawiki-ext-confirmaccount-*.pkg.tar.xz
+mediawiki-ext-confirmaccount-*.pkg*
 ConfirmAccount-REL*.tar*
 ConfirmAccount/
-pkg/
