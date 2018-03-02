@@ -2,13 +2,17 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_pkgver=REL1_30-4fe25f7
-pkgver=${_pkgver/-/_}
+_upstream=REL1_30-4fe25f7
+pkgver=1.30
+# We don't use upstream versioning directly (any more). It confuses our
+# version sorting algorithm.
+# For new versions, just independently change $_upstream and increment
+# $pkgver
 pkgrel=1
 pkgdesc="Requires submission and approval of accounts"
 arch=('any')
 license=("GPL2")
-source=("https://extdist.wmflabs.org/dist/extensions/ConfirmAccount-${_pkgver}.tar.gz")
+source=("https://extdist.wmflabs.org/dist/extensions/ConfirmAccount-${_upstream}.tar.gz")
 releasepage=('https://www.mediawiki.org/wiki/Special:ExtensionDistributor/ConfirmAccount')
 sha512sums=('SKIP')
 # produces a different checksum every time it is downloaded
