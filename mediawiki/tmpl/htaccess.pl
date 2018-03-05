@@ -23,20 +23,22 @@ php_value upload_max_filesize 10M
 php_value post_max_size 10M
 php_admin_value open_basedir $dir:/tmp/:/usr/share/:$cachedir
 
-RewriteEngine on
-Options +FollowSymLinks
-Options -Indexes
+<Location $context>
+  RewriteEngine on
+  Options +FollowSymLinks
+  Options -Indexes
 # this does not inhibit index.php, just the subdirectories
-DirectoryIndex index.php
+  DirectoryIndex index.php
 
-RewriteCond %{REQUEST_URI} ^$context/_/ubos-images/logo.png\$
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.\*)\$ _/ubos-images/mediawiki.png
+  RewriteCond %{REQUEST_URI} ^$context/_/ubos-images/logo.png\$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.\*)\$ _/ubos-images/mediawiki.png [L]
 
 # Don't rewrite again
-RewriteCond %{REQUEST_URI} !^$context/index.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.\*)\$ index.php?title=\$1 [PT,L,QSA]
+  RewriteCond %{REQUEST_URI} !^$context/index.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.\*)\$ index.php?title=\$1 [PT,L,QSA]
+</Location>
 
 RET
 
