@@ -9,6 +9,8 @@ my $hostname    = $config->getResolveOrNull( 'site.hostname' );
 my $context     = $config->getResolveOrNull( 'appconfig.context' );
 my $hiddenpath  = "$context/_";
 my $rewriteBase = $config->getResolveOrNull( 'appconfig.contextorslash' );
+my $dir         = $config->getResolveOrNull( 'appconfig.apache2.dir' );
+my $cachedir    = $config->getResolveOrNull( 'appconfig.cachedir' );
 
 # Unfortunately, Alias directories cannot be used in .htaccess files
 
@@ -19,6 +21,7 @@ my $ret = <<RET;
 
 php_value upload_max_filesize 10M
 php_value post_max_size 10M
+php_admin_value open_basedir $dir:/tmp/:/usr/share/:$cachedir
 
 RewriteEngine on
 Options +FollowSymLinks

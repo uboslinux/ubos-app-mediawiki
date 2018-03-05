@@ -96,7 +96,7 @@
                 },
                 {
                     "type"         : "file",
-                    "name"         : ".htaccess",
+                    "name"         : "${appconfig.apache2.appconfigfragmentfile}",
                     "template"     : "tmpl/htaccess.pl",
                     "templatelang" : "perlscript"
                 },
