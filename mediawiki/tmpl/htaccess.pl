@@ -19,11 +19,11 @@ my $ret = <<RET;
 # Apache config file fragment for app Mediawiki at $hostname$context
 #
 
-php_value upload_max_filesize 10M
-php_value post_max_size 10M
-php_admin_value open_basedir $dir:/tmp/:/usr/share/:$cachedir
-
 <Location $context>
+  php_value upload_max_filesize 10M
+  php_value post_max_size 10M
+  php_admin_value open_basedir $dir:/tmp/:/usr/share/:$cachedir
+
   RewriteEngine on
   Options +FollowSymLinks
   Options -Indexes

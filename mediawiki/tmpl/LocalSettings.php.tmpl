@@ -28,7 +28,7 @@ $wgServer           = "${site.protocol}://$hostname";
 $wgStylePath        = '${appconfig.context}/_/skins';
 
 $wgUploadDirectory    = '_/images';
-$wgFileCacheDirectory = '/var/cache/mediawiki/${appconfig.appconfigid}';
+$wgFileCacheDirectory = '${appconfig.cachedir}';
 $wgUseFileCache       = true;
 
 $wgEnableEmail      = true;

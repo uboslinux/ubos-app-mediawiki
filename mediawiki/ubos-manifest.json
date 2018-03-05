@@ -106,7 +106,7 @@
                 },
                 {
                     "type" : "directory",
-                    "name" : "/var/cache/mediawiki/${appconfig.appconfigid}",
+                    "name" : "${appconfig.cachedir}",
                     "mode" : "0755",
                     "uname" : "${apache2.uname}",
                     "gname" : "${apache2.gname}"
