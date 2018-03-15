@@ -24,27 +24,27 @@
             "wellknown" : {
                 "robotstxt" : {
                     "disallow" : [
-                        "/_/"
+                        "/_mediawiki/"
                     ]
                 }
             },
             "appconfigitems" : [
                 {
                     "type" : "directory",
-                    "name" : "_"
+                    "name" : "_mediawiki"
                 },
                 {
                     "type" : "directory",
                     "names" : [
-                        "_/ubos-accessories",
-                        "_/ubos-images",
-                        "_/ubos-skins",
-                        "_/extensions"
+                        "_mediawiki/ubos-accessories",
+                        "_mediawiki/ubos-images",
+                        "_mediawiki/ubos-skins",
+                        "_mediawiki/extensions"
                     ]
                 },
                 {
                     "type" : "directory",
-                    "name" : "_/images",
+                    "name" : "_mediawiki/images",
                     "retentionpolicy" : "keep",
                     "retentionbucket" : "imagedir",
                     "mode" : "0755",
@@ -74,12 +74,12 @@
                 },
                 {
                     "type"  : "symlink",
-                    "name" : "_/ubos-skins/Vector",
+                    "name" : "_mediawiki/ubos-skins/Vector",
                     "source" : "mediawiki/skins/$2"
                 },
                 {
                     "type"   : "symlink",
-                    "name"   : "_/ubos-images/mediawiki.png",
+                    "name"   : "_mediawiki/ubos-images/mediawiki.png",
                     "source" : "mediawiki/resources/assets/mediawiki.png"
                 },
                 {

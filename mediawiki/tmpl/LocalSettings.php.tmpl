@@ -21,13 +21,13 @@ if( $hostname == '*' ) {
 # $wgShowDBErrorBacktrace = true;
 
 $wgSitename         = '${escapeSquote(installable.customizationpoints.wikititle.value)}';
-$wgScriptPath       = '${appconfig.context}/_';
+$wgScriptPath       = '${appconfig.context}/_mediawiki';
 $wgScriptExtension  = '.php';
 $wgLoadScript       = '${appconfig.context}/load.php';
 $wgServer           = "${site.protocol}://$hostname";
-$wgStylePath        = '${appconfig.context}/_/skins';
+$wgStylePath        = '${appconfig.context}/_mediawiki/skins';
 
-$wgUploadDirectory    = '_/images';
+$wgUploadDirectory    = '_mediawiki/images';
 $wgFileCacheDirectory = '${appconfig.cachedir}';
 $wgUseFileCache       = true;
 
@@ -86,12 +86,12 @@ $wgAllowExternalImages = true;
 
 $wgFileExtensions = array('png','gif','jpg','jpeg','doc','xls','pdf','ppt','tiff','bmp','docx', 'xlsx', 'pptx','ps','odt','ods','odp','odg');
 
-$wgLogo = "${appconfig.context}/_/ubos-images/logo.png"; # Aliased to default if not exists
+$wgLogo = "${appconfig.context}/_mediawiki/ubos-images/logo.png"; # Aliased to default if not exists
 
-if( is_dir( "${appconfig.apache2.dir}/_/ubos-accessories" )) {
-    foreach( scandir( "${appconfig.apache2.dir}/_/ubos-accessories" ) as $accessoryFile ) {
+if( is_dir( "${appconfig.apache2.dir}/_mediawiki/ubos-accessories" )) {
+    foreach( scandir( "${appconfig.apache2.dir}/_mediawiki/ubos-accessories" ) as $accessoryFile ) {
         if( substr( $accessoryFile, -4, 4 ) == '.php' ) {
-            include "${appconfig.apache2.dir}/_/ubos-accessories/$accessoryFile";
+            include "${appconfig.apache2.dir}/_mediawiki/ubos-accessories/$accessoryFile";
         }
     }
 }

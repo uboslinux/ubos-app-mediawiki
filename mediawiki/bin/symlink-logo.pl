@@ -13,7 +13,7 @@ use UBOS::Utils;
 my $ret       = 1;
 my $logoFile  = $config->getResolveOrNull( 'installable.customizationpoints.wikilogo.filename', undef, 1 );
 my $dir       = $config->getResolveOrNull( 'appconfig.apache2.dir' );
-my $localLogo = "$dir/_/ubos-images/logo.png";
+my $localLogo = "$dir/_mediawiki/ubos-images/logo.png";
 
 if( 'deploy' eq $operation ) {
     if( $logoFile && -f $logoFile ) {

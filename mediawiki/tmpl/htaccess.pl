@@ -7,8 +7,6 @@
 
 my $hostname    = $config->getResolveOrNull( 'site.hostname' );
 my $context     = $config->getResolveOrNull( 'appconfig.context' );
-my $hiddenpath  = "$context/_";
-my $rewriteBase = $config->getResolveOrNull( 'appconfig.contextorslash' );
 my $dir         = $config->getResolveOrNull( 'appconfig.apache2.dir' );
 my $cachedir    = $config->getResolveOrNull( 'appconfig.cachedir' );
 
@@ -30,9 +28,12 @@ my $ret = <<RET;
 # this does not inhibit index.php, just the subdirectories
   DirectoryIndex index.php
 
-  RewriteCond %{REQUEST_URI} ^$context/_/ubos-images/logo.png\$
+  RewriteCond %{REQUEST_URI} ^$context\$
+  RewriteRule ^(.*)\$ $context/ [L]
+
+  RewriteCond %{REQUEST_URI} ^$context/_mediawiki/ubos-images/logo.png\$
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.\*)\$ _/ubos-images/mediawiki.png [L]
+  RewriteRule ^(.\*)\$ $context/_mediawiki/ubos-images/mediawiki.png [L]
 
 # Don't rewrite again
   RewriteCond %{REQUEST_URI} !^$context/index.php
