@@ -21,8 +21,8 @@ if( 'install' eq $operation ) {
         my $cmd = "cd '$appConfigDir';";
         $cmd .= " TERM=vt100";
         $cmd .= " php";
-        $cmd .= " -d open_basedir='$appConfigDir:/usr/share/:/tmp'"; # would be nice if this was stricter, but accessories!
-        $cmd .= " /usr/share/mediawiki/mediawiki/maintenance/createAndPromote.php";
+        $cmd .= " -d open_basedir='$appConfigDir:/ubos/share/:/tmp'"; # would be nice if this was stricter, but accessories!
+        $cmd .= " /ubos/share/mediawiki/mediawiki/maintenance/createAndPromote.php";
         $cmd .= " --quiet";
         $cmd .= " --force"; # continue even if user exists already
         $cmd .= " --conf '${appConfigDir}/LocalSettings.php'";

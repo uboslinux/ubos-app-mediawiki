@@ -86,7 +86,10 @@ $wgAllowExternalImages = true;
 
 $wgFileExtensions = array('png','gif','jpg','jpeg','doc','xls','pdf','ppt','tiff','bmp','docx', 'xlsx', 'pptx','ps','odt','ods','odp','odg');
 
-$wgLogo = "${appconfig.context}/_mediawiki/ubos-images/logo.png"; # Aliased to default if not exists
+$wgLogo = '${escapeSquote(installable.customizationpoints.wikilogo.filename)}';
+if( !file_exists( $wgLogo )) {
+    $wgLogo = '/resources/assets/wiki.png';
+}
 
 if( is_dir( "${appconfig.apache2.dir}/_mediawiki/ubos-accessories" )) {
     foreach( scandir( "${appconfig.apache2.dir}/_mediawiki/ubos-accessories" ) as $accessoryFile ) {
