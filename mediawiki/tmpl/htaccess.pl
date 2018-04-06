@@ -9,7 +9,6 @@ my $hostname    = $config->getResolveOrNull( 'site.hostname' );
 my $context     = $config->getResolveOrNull( 'appconfig.context' );
 my $dir         = $config->getResolveOrNull( 'appconfig.apache2.dir' );
 my $cachedir    = $config->getResolveOrNull( 'appconfig.cachedir' );
-my $logoFile    = $config->getResolveOrNull( 'installable.customizationpoints.wikilogo.filename';
 
 # Unfortunately, Alias directories cannot be used in .htaccess files
 
@@ -18,7 +17,7 @@ my $ret = <<RET;
 # Apache config file fragment for app Mediawiki at $hostname$context
 #
 
-<Location $context>
+<Location "$context/">
   php_value upload_max_filesize 10M
   php_value post_max_size 10M
   php_admin_value open_basedir $dir:/tmp/:/ubos/share/:$cachedir

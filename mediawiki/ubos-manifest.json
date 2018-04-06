@@ -101,10 +101,6 @@
                     "templatelang" : "perlscript"
                 },
                 {
-                    "type"   : "perlscript",
-                    "source" : "bin/symlink-logo.pl"
-                },
-                {
                     "type" : "directory",
                     "name" : "${appconfig.cachedir}",
                     "mode" : "0755",

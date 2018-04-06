@@ -4,7 +4,7 @@ maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _majorpkgver=1.30
 pkgver=${_majorpkgver}.0
-pkgrel=5
+pkgrel=6
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL2")
@@ -25,7 +25,7 @@ package() {
     install -D -m644 ${startdir}/appicons/{72x72,144x144}.png -t ${pkgdir}/ubos/http/_appicons/${pkgname}/
 
 # Code
-    install -D -m755 ${startdir}/bin/{create-admin,symlink-logo,upgrade}.pl -t ${pkgdir}/ubos/share/${pkgname}/bin/
+    install -D -m755 ${startdir}/bin/*.pl -t ${pkgdir}/ubos/share/${pkgname}/bin/
 
 # Templates
     install -D -m644 ${startdir}/tmpl/{AdminSettings.php.tmpl,LocalSettings.php.tmpl,htaccess.pl} -t ${pkgdir}/ubos/share/${pkgname}/tmpl/
