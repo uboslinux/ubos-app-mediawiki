@@ -29,7 +29,7 @@ my $TEST = new UBOS::WebAppTest(
                         $c->getMustNotContain( '/Main_Page', '<div class="warningbox">' );
 
                         my $robotsTxt = $c->absGet( '/robots.txt' );
-                        $c->mustMatch( $robotsTxt, '(?m)^Disallow:.*' . quotemeta( $c->context() . '/_/' ) . '$', 'robots.txt contribution wrong' );
+                        $c->mustMatch( $robotsTxt, '(?m)^Disallow:.*' . quotemeta( $c->context() . '/_mediawiki/' ) . '$', 'robots.txt contribution wrong' );
 
                         return 1;
                     }
