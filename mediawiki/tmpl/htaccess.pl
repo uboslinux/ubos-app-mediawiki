@@ -5,6 +5,7 @@
 # Copyright (C) 2014 and later, Indie Computing Corp. All rights reserved. License: see package.
 #
 
+my $tmp         = $config->getResolveOrNull( 'host.tmpdir' );
 my $hostname    = $config->getResolveOrNull( 'site.hostname' );
 my $context     = $config->getResolveOrNull( 'appconfig.context' );
 my $dir         = $config->getResolveOrNull( 'appconfig.apache2.dir' );
@@ -20,7 +21,7 @@ my $ret = <<RET;
 <Location "$context/">
   php_value upload_max_filesize 10M
   php_value post_max_size 10M
-  php_admin_value open_basedir $dir:/tmp/:/ubos/share/:$cachedir
+  php_admin_value open_basedir $dir/:$tmp/:/ubos/share/:$cachedir/:/ubos/lib/ubos/appconfigpars/${appconfig.appconfigid}/
 
   RewriteEngine on
   Options +FollowSymLinks

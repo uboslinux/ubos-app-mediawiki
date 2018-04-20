@@ -1,0 +1,68 @@
+{
+  "steps": [
+    {
+      "type": "HttpRequestResponse",
+      "request": {
+        "verb": "GET",
+        "path": "/wiki",
+        "version": "1.1",
+        "headers": {
+          "Accept": [
+            "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+          ],
+          "Upgrade-Insecure-Requests": [
+            "1"
+          ],
+          "User-Agent": [
+            "Mozilla/5.0 (X11; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Host": [
+            "webapptestsite"
+          ],
+          "Accept-Language": [
+            "en-US,en;q=0.5"
+          ],
+          "Accept-Encoding": [
+            "gzip, deflate"
+          ],
+          "DNT": [
+            "1"
+          ]
+        }
+      },
+      "response": {
+        "status": 301,
+        "version": "1.1",
+        "headers": {
+          "Keep-Alive": [
+            "timeout=5, max=100"
+          ],
+          "Server": [
+            "Apache"
+          ],
+          "Connection": [
+            "Keep-Alive"
+          ],
+          "Content-Length": [
+            "304"
+          ],
+          "Date": [
+            "Mon, 12 Mar 2018 21:23:00 GMT"
+          ],
+          "Location": [
+            "http://webapptestsite/wiki/?title=/srv/http/sites/s48f12055ae06cfa693b792761e9dd4536b24941b/wiki"
+          ],
+          "Content-Type": [
+            "text/html; charset=iso-8859-1"
+          ]
+        },
+        "rawcontentlength": 304,
+        "rawcontentbase64": "PCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9JRVRGLy9EVEQgSFRNTCAyLjAvL0VOIj4KPGh0bWw+PGhlYWQ+Cjx0aXRsZT4zMDEgTW92ZWQgUGVybWFuZW50bHk8L3RpdGxlPgo8L2hlYWQ+PGJvZHk+CjxoMT5Nb3ZlZCBQZXJtYW5lbnRseTwvaDE+CjxwPlRoZSBkb2N1bWVudCBoYXMgbW92ZWQgPGEgaHJlZj0iaHR0cDovL3dlYmFwcHRlc3RzaXRlL3dpa2kvP3RpdGxlPS9zcnYvaHR0cC9zaXRlcy9zNDhmMTIwNTVhZTA2Y2ZhNjkzYjc5Mjc2MWU5ZGQ0NTM2YjI0OTQxYi93aWtpIj5oZXJlPC9hPi48L3A+CjwvYm9keT48L2h0bWw+Cg==",
+        "contentastext": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>301 Moved Permanently</title>\n</head><body>\n<h1>Moved Permanently</h1>\n<p>The document has moved <a href=\"http://webapptestsite/wiki/?title=/srv/http/sites/s48f12055ae06cfa693b792761e9dd4536b24941b/wiki\">here</a>.</p>\n</body></html>\n"
+      }
+    }
+  ]
+}
