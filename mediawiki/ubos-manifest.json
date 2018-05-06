@@ -106,6 +106,10 @@
                     "mode" : "0755",
                     "uname" : "${apache2.uname}",
                     "gname" : "${apache2.gname}"
+                },
+                {
+                    "type"   : "perlscript",
+                    "source" : "bin/setup-logo.pl"
                 }
             ],
             "installers" : [

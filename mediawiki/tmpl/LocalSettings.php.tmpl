@@ -24,6 +24,7 @@ $wgSitename         = '${escapeSquote(installable.customizationpoints.wikititle.
 $wgScriptPath       = '${appconfig.context}/_mediawiki';
 $wgScriptExtension  = '.php';
 $wgLoadScript       = '${appconfig.context}/load.php';
+$wgResourceBasePath = '${appconfig.context}';
 $wgServer           = "${site.protocol}://$hostname";
 $wgStylePath        = '${appconfig.context}/_mediawiki/skins';
 
@@ -86,10 +87,7 @@ $wgAllowExternalImages = true;
 
 $wgFileExtensions = array('png','gif','jpg','jpeg','doc','xls','pdf','ppt','tiff','bmp','docx', 'xlsx', 'pptx','ps','odt','ods','odp','odg');
 
-$wgLogo = '${escapeSquote(installable.customizationpoints.wikilogo.filename)}';
-if( !file_exists( $wgLogo )) {
-    $wgLogo = '/resources/assets/wiki.png';
-}
+$wgLogo = '${appconfig.context}/resources/assets/logo.png';
 
 if( is_dir( "${appconfig.apache2.dir}/_mediawiki/ubos-accessories" )) {
     foreach( scandir( "${appconfig.apache2.dir}/_mediawiki/ubos-accessories" ) as $accessoryFile ) {
