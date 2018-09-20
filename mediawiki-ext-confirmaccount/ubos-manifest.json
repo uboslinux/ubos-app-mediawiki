@@ -11,7 +11,7 @@
             "appconfigitems" : [
                 {
                     "type" : "file",
-                    "name" : "_/ubos-accessories/ConfirmAccount.php",
+                    "name" : "_mediawiki/ubos-accessories/ConfirmAccount.php",
                     "template"     : "tmpl/ConfirmAccount.php.tmpl",
                     "templatelang" : "varsubst"
                 }

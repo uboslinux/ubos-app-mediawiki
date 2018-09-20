@@ -52,7 +52,7 @@
                     "gname" : "${apache2.gname}"
                 },
                 {
-                    "type"  : "symlink",
+                    "type"  : "directorytree",
                     "names" : [
                         "api.php",
                         "autoload.php",
@@ -64,6 +64,7 @@
                         "opensearch_desc.php",
                         "profileinfo.php",
                         "resources",
+                        "serialized",
                         "skins",
                         "thumb.php",
                         "thumb_handler.php",
@@ -73,12 +74,12 @@
                     "source" : "mediawiki/$2"
                 },
                 {
-                    "type"  : "symlink",
+                    "type"  : "directorytree",
                     "name" : "_mediawiki/ubos-skins/Vector",
                     "source" : "mediawiki/skins/$2"
                 },
                 {
-                    "type"   : "symlink",
+                    "type"   : "directorytree",
                     "name"   : "_mediawiki/ubos-images/mediawiki.png",
                     "source" : "mediawiki/resources/assets/mediawiki.png"
                 },
