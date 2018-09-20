@@ -2,13 +2,13 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_upstream=REL1_30-4fe25f7
-pkgver=1.30
+_upstream=REL1_31-5d98110
+pkgver=1.31
 # We don't use upstream versioning directly (any more). It confuses our
 # version sorting algorithm.
 # For new versions, just independently change $_upstream and increment
 # $pkgver
-pkgrel=2
+pkgrel=1
 pkgdesc="Requires submission and approval of accounts"
 arch=('any')
 license=("GPL2")

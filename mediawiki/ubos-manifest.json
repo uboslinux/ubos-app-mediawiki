@@ -116,6 +116,10 @@
                 {
                     "type"   : "perlscript",
                     "source" : "bin/create-admin.pl"
+                },
+                {
+                    "type"   : "perlscript",
+                    "source" : "bin/upgrade.pl"
                 }
             ],
             "upgraders" : [
