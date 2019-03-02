@@ -21,7 +21,7 @@ my $ret = <<RET;
 <Location "$context/">
   php_value upload_max_filesize 10M
   php_value post_max_size 10M
-  php_admin_value open_basedir $dir/:/tmp/:/ubos/share/:$cachedir/:/ubos/lib/ubos/appconfigpars/$appConfigId/
+  php_admin_value open_basedir $dir/:/ubos/share/:/tmp/:/ubos/tmp/:$cachedir/:/ubos/lib/ubos/appconfigpars/$appConfigId/
 
   RewriteEngine on
   Options +FollowSymLinks

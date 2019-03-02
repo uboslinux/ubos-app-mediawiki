@@ -2,9 +2,9 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_majorpkgver=1.31
-pkgver=${_majorpkgver}.1
-pkgrel=12
+_majorpkgver=1.32
+pkgver=${_majorpkgver}.0
+pkgrel=1
 pkgdesc="The wiki that Wikipedia runs on"
 arch=('any')
 license=("GPL2")
@@ -15,7 +15,7 @@ depends=(
     'smtp-server'
 )
 options=('!strip')
-sha512sums=('ee49649cc37d0a7d45a7c6d90c822c2a595df290be2b5bf085affbec3318768700a458a6e5b5b7e437651400b9641424429d6d304f870c22ec63fae86ffc5152')
+sha512sums=('5e198844bba12f5a3a73a05dd7d855d3e883914c6e7c23676921a169dc1c7089ed31adfb7369c24cbaf10b43171dd2a12929284b65edde44d7b9721385ff1cc3')
 
 package() {
 # Manifest
