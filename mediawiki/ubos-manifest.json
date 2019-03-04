@@ -56,20 +56,19 @@
                     "names" : [
                         "api.php",
                         "autoload.php",
+                        "Gruntfile.js",
                         "img_auth.php",
-                        "includes",
                         "index.php",
-                        "languages",
                         "load.php",
                         "opensearch_desc.php",
                         "profileinfo.php",
-                        "resources",
-                        "serialized",
-                        "skins",
                         "thumb.php",
                         "thumb_handler.php",
-                        "vendor",
-                        "Gruntfile.js"
+                        "includes",
+                        "languages",
+                        "resources",
+                        "skins",
+                        "vendor"
                     ],
                     "source" : "mediawiki/$2"
                 },
