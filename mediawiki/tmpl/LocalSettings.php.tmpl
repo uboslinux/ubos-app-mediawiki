@@ -64,7 +64,7 @@ $wgLanguageCode = 'en';
 
 $wgSecretKey = '${randomHex(32)}';
 $wgDefaultSkin = 'vector';
-require_once "$IP/skins/Vector/Vector.php";
+wfLoadSkin( 'Vector' );
 
 $wgRightsPage = '${escapeSquote(installable.customizationpoints.wikititle.value)}:Copyrights';
     # This seems to be the default mentioned in the edit window
