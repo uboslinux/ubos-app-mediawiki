@@ -2,7 +2,7 @@ developer=http://wikimediafoundation.org/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-_upstream=REL1_32-0ccceb9
+_upstream=REL1_33-cacb682
 pkgver=1.32
 # We don't use upstream versioning directly (any more). It confuses our
 # version sorting algorithm.
