@@ -26,6 +26,11 @@
                     "disallow" : [
                         "/_mediawiki/"
                     ]
+                },
+                "robots.txt" : {
+                    "disallow" : [
+                        "/_mediawiki/"
+                    ]
                 }
             },
             "appconfigitems" : [
