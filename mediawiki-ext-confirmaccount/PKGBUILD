@@ -3,12 +3,12 @@ url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 _upstream=REL1_33-cacb682
-pkgver=1.32
+pkgver=1.33
 # We don't use upstream versioning directly (any more). It confuses our
 # version sorting algorithm.
 # For new versions, just independently change $_upstream and increment
 # $pkgver
-pkgrel=3
+pkgrel=1
 pkgdesc="Requires submission and approval of accounts"
 arch=('any')
 license=("GPL2")
