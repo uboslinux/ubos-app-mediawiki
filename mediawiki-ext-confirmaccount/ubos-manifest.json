@@ -109,7 +109,7 @@
         },
         "confirmaccountcontact" : {
             "name"    : "ConfirmAccountContact",
-            "type"    : "string",
+            "type"    : "email",
             "required" : true
         },
         "allowrealname" : {

@@ -115,6 +115,10 @@
                 {
                     "type"   : "perlscript",
                     "source" : "bin/setup-logo.pl"
+                },
+                {
+                    "type" : "systemd-service",
+                    "name" : "smtp-server@${appconfig.appconfigid}"
                 }
             ],
             "installers" : [
