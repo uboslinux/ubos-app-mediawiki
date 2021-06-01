@@ -11,7 +11,7 @@
                 "php-intl"
             ],
             "apache2modules" : [
-                "php7",
+                "php",
                 "rewrite"
             ],
             "phpmodules" : [
