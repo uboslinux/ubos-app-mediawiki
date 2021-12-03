@@ -61,16 +61,16 @@
                     "names" : [
                         "api.php",
                         "autoload.php",
-                        "Gruntfile.js",
+                        "autoload.php",
                         "img_auth.php",
                         "index.php",
                         "load.php",
                         "opensearch_desc.php",
-                        "profileinfo.php",
                         "thumb.php",
                         "thumb_handler.php",
                         "includes",
                         "languages",
+                        "mw-config",
                         "resources",
                         "skins",
                         "vendor"
@@ -152,7 +152,7 @@
                 {
                     "name"   : "maindb",
                     "type"   : "sqlscript",
-                    "source" : "mediawiki/maintenance/tables.sql"
+                    "source" : "mediawiki/maintenance/tables-generated.sql"
                 }
             ]
         }

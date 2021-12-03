@@ -102,29 +102,19 @@ foreach( $wgPasswordPolicy['policies'] as $role => $settings ) {
     if( array_key_exists( 'MinimalPasswordLength', $settings )) {
         $settings['MinimalPasswordLength'] = 6;
     }
-    if( array_key_exists( 'PasswordCannotBePopular', $settings )) {
-        $settings['PasswordCannotBePopular'] = 0;
+    if( array_key_exists( 'PasswordNotInCommonList', $settings )) {
+        $settings['PasswordNotInCommonList']['value'] = false;
+        $settings['PasswordNotInCommonList']['suggestChangeOnLogin'] = false;
     }
     if( array_key_exists( 'PasswordCannotMatchBlacklist', $settings )) {
         $settings['PasswordCannotMatchBlacklist'] = false;
-    }
-    if( array_key_exists( 'PasswordNotInLargeBlacklist', $settings )) {
-        $settings['PasswordNotInLargeBlacklist'] = false;
     }
 }
 if( array_key_exists( 'MinimalPasswordLength', $wgPasswordPolicy['policies']['default'] )) {
     $wgPasswordPolicy['policies']['default']['MinimalPasswordLength']['value'] = 6;
     $wgPasswordPolicy['policies']['default']['MinimalPasswordLength']['suggestChangeOnLogin'] = false;
 }
-if( array_key_exists( 'PasswordCannotBePopular', $wgPasswordPolicy['policies']['default'] )) {
-    $wgPasswordPolicy['policies']['default']['PasswordCannotBePopular']['value'] = 0;
-    $wgPasswordPolicy['policies']['default']['PasswordCannotBePopular']['suggestChangeOnLogin'] = false;
-}
-if( array_key_exists( 'PasswordCannotMatchBlacklist', $wgPasswordPolicy['policies']['default'] )) {
-    $wgPasswordPolicy['policies']['default']['PasswordCannotMatchBlacklist']['value'] = false;
-    $wgPasswordPolicy['policies']['default']['PasswordCannotMatchBlacklist']['suggestChangeOnLogin'] = false;
-}
-if( array_key_exists( 'PasswordNotInLargeBlacklist', $wgPasswordPolicy['policies']['default'] )) {
-    $wgPasswordPolicy['policies']['default']['PasswordNotInLargeBlacklist']['value'] = false;
-    $wgPasswordPolicy['policies']['default']['PasswordNotInLargeBlacklist']['suggestChangeOnLogin'] = false;
+if( array_key_exists( 'PasswordNotInCommonList', $wgPasswordPolicy['policies']['default'] )) {
+    $wgPasswordPolicy['policies']['default']['PasswordNotInCommonList']['value'] = 0;
+    $wgPasswordPolicy['policies']['default']['PasswordNotInCommonList']['suggestChangeOnLogin'] = false;
 }
